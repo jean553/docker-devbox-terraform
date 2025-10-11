@@ -9,7 +9,7 @@ Based on Terraform documentation from [here](https://developer.hashicorp.com/wel
 ```sh
 docker build -t docker-devbox-terraform . \
 --build-arg PRODUCT=terraform \
---build-arg VERSION=1.11.4
+--build-arg VERSION=1.13.3
 ```
 
 ## Run Terraform commands
