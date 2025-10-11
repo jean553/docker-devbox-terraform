@@ -9,7 +9,7 @@ Based on Terraform documentation from [here](https://developer.hashicorp.com/wel
 ```sh
 docker build -t docker-devbox-terraform . \
 --build-arg PRODUCT=terraform \
---build-arg VERSION=1.11.4
+--build-arg VERSION=1.13.3
 ```
 
 ## Run Terraform commands
@@ -19,9 +19,6 @@ docker run -it -v $(pwd):/terraform \
 -v ~/.aws/credentials:/root/.aws/credentials \
 -v ~/.config/scw/config.yaml:/root/.config/scw/config.yaml \
 -w /terraform \
--e AWS_PROFILE=scw \
 docker-devbox-terraform \
 terraform plan
 ```
-
-`scw/config.yaml` is required for Scaleway cloud provider. `AWS_PROFILE=...` is required if your configuration is set up with several profiles.
